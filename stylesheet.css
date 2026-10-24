@@ -1,0 +1,13 @@
+/* Sits left of GNOME's own "Show Pointer" button and reuses its style. */
+.textsnip-ocr-button {
+  margin-right: 6px;
+}
+
+.textsnip-result-scroll {
+  min-width: 520px;
+  max-height: 360px;
+}
+
+.textsnip-result-text {
+  min-height: 120px;
+}

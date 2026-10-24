@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.textsnip" path="/org/gnome/shell/extensions/textsnip/">
+    <key name="snip-shortcut" type="as">
+      <default><![CDATA[['<Super><Shift>t']]]></default>
+      <summary>Shortcut that opens the screenshot UI in text mode</summary>
+    </key>
+    <key name="language" type="s">
+      <default>'eng'</default>
+      <summary>Tesseract language code used for recognition</summary>
+    </key>
+    <key name="autocopy" type="b">
+      <default>true</default>
+      <summary>Copy recognized text to the clipboard automatically</summary>
+    </key>
+  </schema>
+</schemalist>
