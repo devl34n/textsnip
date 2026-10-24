@@ -1,4 +1,4 @@
-# Text Snip (GNOME Shell extension)
+# textsnip (GNOME Shell extension)
 
 Adds a **T** toggle to GNOME's own screenshot UI. When the toggle is on, the shot is not saved as an image. It goes to Tesseract instead, and the recognized text appears in a dialog and is copied to the clipboard. Recognition runs locally. Selection, Screen and Window modes all work.
 
@@ -25,7 +25,7 @@ Log out and back in. Wayland can't reload GNOME Shell inside a running session.
 
 **T** is off whenever you open the screenshot UI normally. Starting a screencast turns it off.
 
-Change the shortcut or auto-copy under Extensions → Text Snip → Settings.
+Change the shortcut or auto-copy under Extensions → textsnip → Settings.
 
 ## How it works
 
@@ -48,4 +48,4 @@ journalctl -f -o cat /usr/bin/gnome-shell
 gnome-extensions info textsnip@devl34n.github.io
 ```
 
-If a GNOME update renames the private fields this extension uses, enabling fails with `Text Snip: GNOME screenshot UI ... not recognized/not found`.
+If a GNOME update renames the private fields this extension uses, enabling fails with `textsnip: GNOME screenshot UI ... not recognized/not found`.
