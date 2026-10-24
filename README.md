@@ -33,14 +33,6 @@ GNOME's screenshot UI has no API for extensions, so this extension overrides its
 
 Before recognition, the image is converted to grayscale, inverted if it is light-on-dark, upscaled and padded.
 
-## Publishing to extensions.gnome.org
-
-```sh
-./pack.sh
-```
-
-This builds `dist/textsnip@devl34n.github.io.shell-extension.zip` without compiled schemas and lists what's inside. Upload it at https://extensions.gnome.org/upload/. For each new upload, bump `version-name` in `metadata.json`. When a new GNOME release is tested, add it to `shell-version`.
-
 ## Debugging
 
 ```sh
