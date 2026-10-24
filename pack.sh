@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Builds the zip to upload to extensions.gnome.org.
-#   ./pack.sh        # writes dist/textsnip@gregzky.github.io.shell-extension.zip
+#   ./pack.sh        # writes dist/textsnip@devl34n.github.io.shell-extension.zip
 set -euo pipefail
 cd "$(dirname "$0")"
 
-UUID=textsnip@gregzky.github.io
+UUID=textsnip@devl34n.github.io
 ZIP=dist/$UUID.shell-extension.zip
 
 # Reviewers reject unused files; everything in icons/ gets packed.
@@ -16,16 +16,12 @@ for icon in icons/*; do
     fi
 done
 
-# LICENSE sits next to this script in the repo, or one level up in the old layout.
-license=LICENSE
-[[ -f $license ]] || license=../LICENSE
-
 mkdir -p dist
 gnome-extensions pack --force --out-dir dist \
     --extra-source=ocr.js \
     --extra-source=resultDialog.js \
     --extra-source=icons \
-    --extra-source="$license" \
+    --extra-source=LICENSE \
     --schema=schemas/org.gnome.shell.extensions.textsnip.gschema.xml \
     .
 

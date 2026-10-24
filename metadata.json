@@ -1,9 +1,9 @@
 {
-  "uuid": "textsnip@gregzky.github.io",
+  "uuid": "textsnip@devl34n.github.io",
   "name": "Text Snip",
   "description": "Copy text from anywhere on screen. Adds a \"Recognize Text\" toggle to GNOME's screenshot UI: with it on, the selected area, screen or window is turned into text instead of an image, shown in a dialog and copied to the clipboard. Super+Shift+T opens the screenshot UI with the toggle already on.\n\nRecognition runs locally with Tesseract, which must be installed:\n  Fedora: sudo dnf install tesseract tesseract-langpack-eng\n  Debian/Ubuntu: sudo apt install tesseract-ocr\nInstall more language packs to switch languages in the result dialog.",
   "shell-version": ["51"],
-  "url": "https://github.com/gregzky/textsnip",
+  "url": "https://github.com/devl34n/textsnip",
   "settings-schema": "org.gnome.shell.extensions.textsnip",
   "version-name": "0.1.0"
 }

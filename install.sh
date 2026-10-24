@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-UUID=textsnip@gregzky.github.io
+UUID=textsnip@devl34n.github.io
 
 if ! command -v tesseract >/dev/null; then
     echo "warning: tesseract not found. Install it with:" >&2
@@ -32,13 +32,6 @@ if [[ $enabled != *"'$UUID'"* ]]; then
         updated="${enabled%]}, '$UUID']"
     fi
     gsettings set org.gnome.shell enabled-extensions "$updated"
-fi
-
-# The Flatpak version's install-shortcut.sh used the same key combination.
-old=/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/textsnip/
-if [[ $(gsettings get org.gnome.settings-daemon.plugins.media-keys custom-keybindings) == *"$old"* ]]; then
-    echo "note: the old Flatpak shortcut 'Text Snip (OCR)' still exists. Remove it in"
-    echo "      Settings > Keyboard > Custom Shortcuts so it doesn't clash with Super+Shift+T."
 fi
 
 echo "Installed $UUID. Log out and back in to load it."
